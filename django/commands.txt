@@ -1,0 +1,14 @@
+Part 1
+=============
+py manage.py makemigrations --dry-run --verbosity 3
+py manage.py runserver
+py manage.py createsuperuser 
+pip install coverage
+coverage run --omit='*/venv/*' manage.py test
+coverage html
+pip install djangorestframework
+=============
+Part 3
+pip install djangorestframework-simplejwt
+
+$ curl -X POST -d "email=a@a.com&password=aa610153" http://localhost:8000/api/token/
